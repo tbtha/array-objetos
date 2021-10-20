@@ -1,3 +1,4 @@
+
 const radiologia = [
     {
         hora : "11:00",
@@ -133,6 +134,58 @@ const dental = [
     },
 ]
 
+//ciclo radiologia
+let tablaUno = "<tr><th>HORA</th><th>ESPECIALISTA</th><th>PACIENTE</th><th>RUT</th><th>PREVISION</th></tr>"
+
+for ( let i = 0 ; i < radiologia.length ; i++){
+    tablaUno += `  <tr>
+                    <td>${radiologia[i].hora}</td>
+                    <td>${radiologia[i].especialista}</td>
+                    <td>${radiologia[i].paciente}</td>
+                    <td>${radiologia[i].rut}</td>
+                    <td>${radiologia[i].prevision}</td>
+                </tr>`
+}
+document.querySelector("#cuerpo-tablaUno").innerHTML = tablaUno
+
+//ciclo traumatologia
+let tablaDos = "<tr><th>HORA</th><th>ESPECIALISTA</th><th>PACIENTE</th><th>RUT</th><th>PREVISION</th></tr>"
+
+for ( let i = 0 ; i < traumautologia.length ; i++){
+    tablaDos += `  <tr>
+                    <td>${traumautologia[i].hora}</td>
+                    <td>${traumautologia[i].especialista}</td>
+                    <td>${traumautologia[i].paciente}</td>
+                    <td>${traumautologia[i].rut}</td>
+                    <td>${traumautologia[i].prevision}</td>
+                </tr>`
+}
+document.querySelector("#cuerpo-tablaDos").innerHTML = tablaDos
+
+//ciclo dental
+let tablaTres = "<tr><th>HORA</th><th>ESPECIALISTA</th><th>PACIENTE</th><th>RUT</th><th>PREVISION</th></tr>"
+
+for ( let i = 0 ; i < dental.length ; i++){
+    tablaTres += `  <tr>
+                    <td>${dental[i].hora}</td>
+                    <td>${dental[i].especialista}</td>
+                    <td>${dental[i].paciente}</td>
+                    <td>${dental[i].rut}</td>
+                    <td>${dental[i].prevision}</td>
+                </tr>`
+}
+document.querySelector("#cuerpo-tablaTres").innerHTML = tablaTres
+
+
+//atenciones radiografia
+
+document.querySelector("#radiografia").innerHTML = ` Primera atención : ${radiologia[0].paciente} - ${radiologia[0].prevision} | Última atencion : ${radiologia[4].paciente} - ${radiologia[4].prevision} ` 
+
+//atenciones traumatologia
+document.querySelector("#traumatologia").innerHTML = ` Primera atención : ${traumautologia[0].paciente} - ${traumautologia[0].prevision} | Última atencion : ${traumautologia[6].paciente} - ${traumautologia[6].prevision} ` 
+
+//atenciones dentales
+document.querySelector("#dental").innerHTML = `Primera atención : ${dental[0].paciente} - ${dental[0].prevision} | Última atencion : ${dental[5].paciente} - ${dental[5].prevision}`
 
 
 
@@ -143,23 +196,3 @@ const dental = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//radiologia Array objeto por cada ppaciente
-//tramautologia Array
